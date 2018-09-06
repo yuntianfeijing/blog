@@ -38,6 +38,8 @@ for each item:
 return item
 ```
 可以看到这个是一个weight的简单的函数，这个意味着改变一个item的权重不会影响到其他的项目
+目前默认的还是straw算法，内核在kernel4.1以后才支持straw2
+注意librados是服务端支持，客户端就支持，涉及到内核客户端的，就需要内核版本的支持，内核从4.1开始支持，也就是cephfs和rbd的块设备方式需要内核4.1及以上支持，openstack对接的是librados可以默认支持，其他的也都默认可以支持的
 
 ### clister map ###
 clister map 常用节点（层级）类型
